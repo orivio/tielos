@@ -1,10 +1,24 @@
-h2{
-    align-items:center;
+body{
+    background-color: #6381AB;
 }
-
-buttons{
+h1, h4{
     text-align: center;
-    display: inline-block;
-    border-radius: 5px;
+    font-family: "Cantarell", sans-serif;
+}
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+.buttons{
+    padding: 30px 70px 30px 70px;
+    width: 40%;
+    border-radius: 20px;
     background-color: #87ABDE;
+    font-family: "Cantarell", sans-serif;
+    color: white;
+    text-decoration-line: none;
+    font-size: xxx-large;
 }
