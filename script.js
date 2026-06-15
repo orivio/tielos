@@ -47,10 +47,14 @@ function makeDraggable(element){
 
 var aboutWin = document.querySelector("#aboutme");
 var closeButton = document.querySelector("#aboutmeclosebutton");
+var openButton = document.querySelector("#aboutmeopenbutton");
 
 closeButton.addEventListener("click", function(){
     closeWindow(aboutme);
 });
+openButton.addEventListener("click", function(){
+    openWindow(aboutme);
+})
 
 function closeWindow(e){
     e.style.display = "none";

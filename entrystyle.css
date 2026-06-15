@@ -46,6 +46,8 @@ body{
     width:80%;
     transform:translate(-5%);
     background-color: aliceblue;
+    user-select: none;
+    cursor: default;
 }
 
 .closeButton{
@@ -55,4 +57,16 @@ body{
     padding: 5px;
     padding-right: 10px;
     padding-left: 10px;
+    font-family: monospace;
+    background-color: aliceblue;
+    font-size: large;
+    user-select: none;
+    cursor: default;
+}
+
+.openButton{
+    padding: 20px;
+    background-color: aliceblue;
+    display: flex;
+    position: absolute;
 }
