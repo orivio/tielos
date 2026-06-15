@@ -11,11 +11,13 @@ body{
     display: flex;
     background-color: rgba(97, 119, 173, 0.9);
     padding: 20px;
+    padding-top: 0px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-color: aliceblue;
     border: 1px;
     backdrop-filter: blur(10px);
     position: absolute;
+    border-radius: 5px;
 }
 #navbar{
     background-color: rgba(144, 165, 219, 0.7);
@@ -29,9 +31,28 @@ body{
     position:absolute;
     bottom: 0%;
     height: 30px;
+    border-radius: 20px;
 }
 .navchild{
     padding-left: 15px;
     padding-right: 15px;
     font-size: x-large;
+}
+.header{
+    margin-top: 0px;
+    padding-top: 15px;
+    padding-bottom: 3px;
+    padding-left: 3px;
+    width:80%;
+    transform:translate(-5%);
+    background-color: aliceblue;
+}
+
+.closeButton{
+    position: absolute;
+    right: 5%;
+    font-weight: 800;
+    padding: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
 }
