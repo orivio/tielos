@@ -3,6 +3,7 @@ body{
     background-repeat:no-repeat;
     background-position: -60;
     backdrop-filter: blur(3px);
+    display: flex;
 }
 #aboutme{
     flex-direction: column;
