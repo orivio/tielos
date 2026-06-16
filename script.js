@@ -5,6 +5,7 @@ function timeUpd() {
 setInterval(timeUpd, 1000);
 
 makeDraggable(document.getElementById("aboutme"));
+makeDraggable(document.getElementById("blog"));
 
 function makeDraggable(element){
     var initialX = 0;
@@ -49,12 +50,27 @@ var aboutWin = document.querySelector("#aboutme");
 var closeButton = document.querySelector("#aboutmeclosebutton");
 var openButton = document.querySelector("#aboutmeopenbutton");
 
+var blogWin = document.querySelector("#blog");
+var closeBlog = document.querySelector("#blogclosebutton");
+var openBlog = document.querySelector("#blogopenbutton");
+
 closeButton.addEventListener("click", function(){
     closeWindow(aboutme);
 });
 openButton.addEventListener("click", function(){
     openWindow(aboutme);
 })
+
+
+closeBlog.addEventListener("click", function(){
+    closeWindow(blog);
+});
+
+openBlog.addEventListener("click", function(){
+    openWindow(blog);
+})
+
+// function makeClosable(e){} IMPLEMENT LATER!!!!!!!!!!!!
 
 function closeWindow(e){
     e.style.transition = "all 0.1s ease-in-out";
@@ -65,6 +81,7 @@ function closeWindow(e){
         e.style.transition = "none";
     }, 100);
 }
+var largestInd = 1;
 
 function openWindow(e){
     if(e.style.display === "none"){
@@ -80,4 +97,26 @@ function openWindow(e){
     setTimeout(() => {
         e.style.transition = "none";
     }, 100);
+    largestInd++;
+    e.style.zIndex = largestInd;
+}
+
+function windowTapsImplement(e){
+    e.addEventListener("mousedown", () =>
+        windowTap(e)
+    )
+}
+
+var nav = document.querySelector("#navbar");
+
+function windowTap(e){
+    largestInd++;
+    e.style.zIndex = largestInd;
+    nav.style.zIndex = largestInd + 1;
+}
+
+function windowTime(e){
+    var tab = document.querySelector("#" + e)
+    windowTapsImplement(tab)
+    makeDraggable(tab)
 }
