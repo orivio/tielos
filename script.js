@@ -57,9 +57,27 @@ openButton.addEventListener("click", function(){
 })
 
 function closeWindow(e){
-    e.style.display = "none";
+    e.style.transition = "all 0.1s ease-in-out";
+    e.style.transform = "scale(0.1)";
+    setTimeout(() => {
+        e.style.display = "none";
+        //e.style.transform = "scale(0.1)";
+        e.style.transition = "none";
+    }, 100);
 }
 
 function openWindow(e){
+    if(e.style.display === "none"){
+        e.style.top = "0px";
+        e.style.left = "0px";
+    }
+    e.style.transform = "scale(0.1)";
     e.style.display = "flex";
+    e.style.transition = "all 0.1s ease-in-out";
+    requestAnimationFrame(() => {
+        e.style.transform = "scale(1)";
+    });
+    setTimeout(() => {
+        e.style.transition = "none";
+    }, 100);
 }
