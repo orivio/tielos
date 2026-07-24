@@ -6,6 +6,7 @@ setInterval(timeUpd, 1000);
 
 makeDraggable(document.getElementById("aboutme"));
 makeDraggable(document.getElementById("blog"));
+makeDraggable(document.getElementById("bird"));
 
 function makeDraggable(element){
     var initialX = 0;
@@ -54,6 +55,10 @@ var blogWin = document.querySelector("#blog");
 var closeBlog = document.querySelector("#blogclosebutton");
 var openBlog = document.querySelector("#blogopenbutton");
 
+var BirdWin = document.querySelector("#bird");
+var closeBird = document.querySelector("#birdclosebutton");
+var openBird = document.querySelector("#birdopenbutton");
+
 closeButton.addEventListener("click", function(){
     closeWindow(aboutme);
 });
@@ -68,6 +73,14 @@ closeBlog.addEventListener("click", function(){
 
 openBlog.addEventListener("click", function(){
     openWindow(blog);
+})
+
+closeBird.addEventListener("click", function(){
+    closeWindow(bird);
+});
+
+openBird.addEventListener("click", function(){
+    openWindow(bird);
 })
 
 // function makeClosable(e){} IMPLEMENT LATER!!!!!!!!!!!!
